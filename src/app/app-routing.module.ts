@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './components/layout/layout.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
       RouterModule.forRoot([
           {
-              path: '', component: LayoutComponent,
+              path: '', component: AppComponent,
               children: [
                   { path: '', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
                   // { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
